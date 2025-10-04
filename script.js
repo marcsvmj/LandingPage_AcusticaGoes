@@ -12,45 +12,34 @@ const swiper = new Swiper('.mySwiper', {
 // =============================
 // Scroll entre seções com setas existentes no HTML
 // =============================
-
-// Seleciona todas as seções e elementos relevantes
 const sections = [
-    document.querySelector("body > div.w3-bar"), // Navbar
     document.querySelector("header"),
     document.getElementById("sobre-nos"),
     document.getElementById("servicos"),
     document.getElementById("clientes"),
     document.getElementById("contate-nos"),
-    document.querySelector("footer") // Footer
+    document.querySelector("footer")
 ];
 
 let currentIndex = 0;
+const navbarHeight = 70;
 
-// Função de scroll suave com animação de deslizar
 function scrollToSection(index) {
     if (index < 0) index = 0;
     if (index >= sections.length) index = sections.length - 1;
 
-    let targetY;
     const targetSection = sections[index];
-
-    // Se for navbar, vai para o topo
-    if (targetSection.tagName.toLowerCase() === "div") {
-        targetY = 0;
-    } else {
-        targetY = targetSection.offsetTop;
-    }
+    let targetY = targetSection.offsetTop - navbarHeight;
 
     const startY = window.scrollY;
     const distance = targetY - startY;
-    const duration = 600; // duração em ms
+    const duration = 600;
     let startTime = null;
 
     function animation(currentTime) {
         if (!startTime) startTime = currentTime;
         const timeElapsed = currentTime - startTime;
         const progress = Math.min(timeElapsed / duration, 1);
-        // ease in-out
         const ease = progress < 0.5
             ? 2 * progress * progress
             : -1 + (4 - 2 * progress) * progress;
@@ -64,11 +53,9 @@ function scrollToSection(index) {
     currentIndex = index;
 }
 
-// Seleciona os botões existentes no HTML
 const arrowUp = document.getElementById("up-btn");
 const arrowDown = document.getElementById("down-btn");
 
-// Adiciona eventos de clique
 arrowUp.addEventListener("click", () => {
     scrollToSection(currentIndex - 1);
 });
@@ -77,7 +64,6 @@ arrowDown.addEventListener("click", () => {
     scrollToSection(currentIndex + 1);
 });
 
-// Atualiza currentIndex ao fazer scroll manualmente
 window.addEventListener("scroll", () => {
     let closestIndex = 0;
     let closestDistance = Infinity;
@@ -114,33 +100,32 @@ document.addEventListener("DOMContentLoaded", function () {
 // Carrossel dos Serviços
 // =============================
 document.addEventListener("DOMContentLoaded", () => {
-  const servicos = document.querySelectorAll(".servicoSwiper");
+    const servicos = document.querySelectorAll(".servicoSwiper");
 
-  servicos.forEach(swiperEl => {
-    new Swiper(swiperEl, {
-      loop: false, // não fica girando infinito
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: swiperEl.querySelector(".swiper-button-next"),
-        prevEl: swiperEl.querySelector(".swiper-button-prev"),
-      },
-      effect: 'slide',
-      allowTouchMove: true, // arrastar no mouse/touch
-      autoplay: false // NÃO passa sozinho
+    servicos.forEach(swiperEl => {
+        new Swiper(swiperEl, {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: swiperEl.querySelector(".swiper-button-next"),
+                prevEl: swiperEl.querySelector(".swiper-button-prev"),
+            },
+            effect: 'slide',
+            allowTouchMove: true,
+            autoplay: false
+        });
     });
-  });
 });
 
 // =============================
-// Esteira contínua de logos (clientes/parceiros)
+// Esteira contínua de clientes
 // =============================
 document.addEventListener("DOMContentLoaded", () => {
     const swiperEl = document.querySelector('.clientesSwiper .swiper-wrapper');
     const slides = swiperEl.children;
 
-    // Clona slides até preencher bem a esteira
-    const minSlides = 20; // número mínimo de repetições (pode ajustar)
+    const minSlides = 20;
     let count = slides.length;
 
     while (count < minSlides) {
@@ -163,4 +148,46 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         allowTouchMove: false,
     });
+});
+
+// =============================
+// Scroll com offset para botões "Mais" e WhatsApp
+// =============================
+document.addEventListener("DOMContentLoaded", () => {
+    const contateNosSection = document.getElementById("contate-nos");
+
+    const whatsappBtn = document.querySelector(".navbar-end a[href='#contate-nos']");
+    const maisBtn = document.querySelector("#servicos .w3-third:last-child a[href='#contate-nos']");
+
+    [whatsappBtn, maisBtn].forEach(btn => {
+        if (btn) {
+            btn.addEventListener("click", (e) => {
+                e.preventDefault();
+                scrollToSectionOffset(contateNosSection);
+            });
+        }
+    });
+
+    function scrollToSectionOffset(targetElement) {
+        const targetY = targetElement.offsetTop - navbarHeight;
+        const startY = window.scrollY;
+        const distance = targetY - startY;
+        const duration = 600;
+        let startTime = null;
+
+        function animation(currentTime) {
+            if (!startTime) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1);
+            const ease = progress < 0.5
+                ? 2 * progress * progress
+                : -1 + (4 - 2 * progress) * progress;
+            window.scrollTo(0, startY + distance * ease);
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+            }
+        }
+
+        requestAnimationFrame(animation);
+    }
 });
