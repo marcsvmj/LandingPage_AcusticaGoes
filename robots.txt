@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+# url do site - Sitemap: https://www.seusite.com/sitemap.xml
