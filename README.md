@@ -22,7 +22,8 @@ O site foi desenvolvido em **HTML, CSS e JavaScript** com suporte da biblioteca 
 ## 🔹 Demo (Ainda em progresso)
 - GIF
 - VÍDEO
-(Organizar um ao lado do outro em um grid)
+- Github Pages (travado mas funciona em grande maioria)
+    https://marcsvmj.github.io/LandingPage_AcusticaGoes/
 
 ---
 
