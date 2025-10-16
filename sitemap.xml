@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Página Inicial -->
+  <url>
+    <loc>https://www.acusticagoes.com.br/</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <!-- Sobre Nós -->
+  <url>
+    <loc>https://www.acusticagoes.com.br/#sobre-nos</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Serviços -->
+  <url>
+    <loc>https://www.acusticagoes.com.br/#servicos</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.acusticagoes.com.br/servicos/portas-acusticas</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.acusticagoes.com.br/servicos/jateamento</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.acusticagoes.com.br/servicos/tratamento-thermo-acustico</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.acusticagoes.com.br/servicos/revestimentos-acusticos</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.acusticagoes.com.br/servicos/paineis-acusticos</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.acusticagoes.com.br/servicos/outros</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Benefícios -->
+  <url>
+    <loc>https://www.acusticagoes.com.br/#beneficios</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Clientes -->
+  <url>
+    <loc>https://www.acusticagoes.com.br/#clientes</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Contato -->
+  <url>
+    <loc>https://www.acusticagoes.com.br/#contate-nos</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+</urlset>

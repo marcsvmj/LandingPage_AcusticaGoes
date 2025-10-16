@@ -1,4 +1,11 @@
+# Bloqueio de arquivos e pastas que não precisam ser indexados
 User-agent: *
-Disallow:
+Disallow: /scripts/
+Disallow: /styles/
+Disallow: /assets/
 
-# url do site - Sitemap: https://www.seusite.com/sitemap.xml
+# Permitir indexação das páginas e seções públicas
+Allow: /
+
+# Sitemap para motores de busca
+Sitemap: https://www.acusticagoes.com.br/sitemap.xml
