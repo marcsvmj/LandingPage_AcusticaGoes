@@ -173,6 +173,7 @@ p {
   scrollbar-color: #004080 #9c9c9c;
 }
 
+/* Sobre Nós */
 .sobre-nos-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -180,11 +181,12 @@ p {
   align-items: stretch;
 }
 
-.sobre-nos-text {
+.sobre-nos-text,
+#sobre-nos > p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: clamp(0.9rem, 1.15rem, 1.15rem);
+  font-size: clamp(0.75rem, 0.9vw + 0.7rem, 1.5rem);
   line-height: 1.6;
 }
 
@@ -201,12 +203,7 @@ p {
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
-  min-height: 140px;
-}
-
-#sobre-nos>p {
-  font-size: clamp(0.9rem, 1.15rem, 1.15rem);
-  margin-bottom: 6px;
+  min-height: 160px;
 }
 
 @media (min-width: 900px) {
@@ -216,7 +213,7 @@ p {
   }
 
   #sobre-nos>p {
-    height: auto;
+    height: auto
   }
 }
 
@@ -324,13 +321,13 @@ p {
 
   #servicos .servicoSwiper .swiper-button-next,
   #servicos .servicoSwiper .swiper-button-prev {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
   }
 
   #servicos .servicoSwiper .swiper-button-next::after,
   #servicos .servicoSwiper .swiper-button-prev::after {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 
@@ -459,6 +456,7 @@ p {
 }
 
 .beneficios-text-content {
+  position: relative;
   width: 100%;
   color: #ffffff;
   text-align: left;
@@ -467,7 +465,7 @@ p {
 }
 
 .beneficio-item .seta-animada {
-  position: absolute;
+  position: relative;
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
@@ -491,6 +489,7 @@ p {
   transition: transform 0.4s ease, top 0.4s ease;
   font-size: 1.2rem;
 }
+
 
 .beneficio-item.active {
   color: #7ccfeb;
@@ -522,7 +521,7 @@ p {
 .beneficios-slider {
   position: relative;
   width: 90%;
-  height: 90%;
+  height: 450px;
   margin: auto;
   border-radius: 12px;
   overflow: hidden;
@@ -580,8 +579,6 @@ p {
 
   .beneficios-text-box {
     position: relative !important;
-    z-index: 2 !important;
-    width: 100% !important;
   }
 
   .beneficios-text-content {

@@ -15,22 +15,14 @@ Landing page institucional para **Acústica Góes**, empresa especializada em so
 
 O site foi desenvolvido em **HTML, CSS e JavaScript** com suporte da biblioteca **W3.CSS** para responsividade e agilidade no layout. É uma **landing page estática**, sem login, focada em apresentar os serviços da empresa e gerar contatos via **WhatsApp**.
 
-> Desenvolvido em 3 dias, com atenção a detalhes visuais e auxílio de IA, responsividade e boas práticas de SEO mesmo nesta sendo minha primeira vez com estudo e uso desta prática. Sujeito a futuras melhorias conforme demandas do cliente.
-
----
-
-## 🔹 Demo (Ainda em progresso)
-- GIF
-- VÍDEO
-- Github Pages (travado mas funciona em grande maioria)
-    https://marcsvmj.github.io/LandingPage_AcusticaGoes/
+> Desenvolvido com auxílio de IA (ChatGPT e correlatos) em aproximadamente 3 dias, com atenção a detalhes visuais, responsividade e boas práticas de SEO mesmo sendo minha primeira vez com estudo do recurso. O projeto atual é sujeito a futuras melhorias conforme demandas do cliente.
 
 ---
 
 ## 🔹 Funcionalidades
 
 - Navbar fixa com acesso rápido às seções
-- Slider/banner principal com **Swiper.js**
+- Slider/banner principal com **Swiper em Javascript**
 - Seção **Sobre Nós** destacando a história e atuação da empresa
 - Seção **Serviços** com carrosséis de imagens detalhando cada serviço
 - Seção **Benefícios** com swiper representativo de lista de benefícios
@@ -66,9 +58,17 @@ O site foi desenvolvido em **HTML, CSS e JavaScript** com suporte da biblioteca 
 
 ---
 
+## 🔹 Direitos Autorais
+
+- © 2025 Marcos VMJ. Todos os direitos reservados. Este software foi desenvolvido por Marcos Vinicius Melo de Jesus sob contratação da empresa Acústica Góes. A titularidade dos direitos autorais é exclusiva do desenvolvedor e da empresa contratante.
+
+---
+
 ## 🔹 Como Visualizar
 
-1. Clone este repositório:
+- Domínio atual (acusticagoes.com.br)
+- Clone o repositório (prestar atenção aos caminhos de script.js e styles.css)
 
 ```bash
 git clone https://github.com/marcsvmj/acustica-goes.git
+
