@@ -7,7 +7,7 @@
 
 ![Banner do Projeto](assets/MediumIcon.png)
 
-Landing page institucional para **Acústica Góes**, empresa especializada em soluções acústicas em todo o Brasil, incluindo portas acústicas, painéis, isolamento acústico, jateamento e tratamento thermo-acústico.
+Landing page institucional para **Acústica Góes**, empresa especializada em soluções acústicas em todo o Brasil, estava em busca de um site como solução para falta de presença na internet e solução para aumentar a quantidade de contatos via WhatsApp. Implementei SEO e estou ajustando o site constantemente com Google ADS, Analytics e outras ferramentas relevantes.
 
 ---
 
@@ -30,7 +30,7 @@ O site foi desenvolvido em **HTML, CSS e JavaScript** com suporte da biblioteca 
 - Seção **Contate-nos** com QR code para WhatsApp
 - Footer responsivo com links para GitHub, LinkedIn e WhatsApp do desenvolvedor
 - **SEO e Open Graph** configurados para melhor indexação
-- **Schema.org JSON-LD e robots.txt** implementado para melhorar presença em buscadores
+- **Schema.org JSON-LD, sitemap.xml, robots.txt e outros arquivos** implementados para melhorar presença em buscadores
 
 ---
 
@@ -40,10 +40,11 @@ O site foi desenvolvido em **HTML, CSS e JavaScript** com suporte da biblioteca 
     Performance (2/4 por flexibilidade e tamanho de imagens);
     Acessibilidade (23/25 por elementos li e botões aparentemente pequenos);
     Boas práticas (6/6);
-    SEO (5/6 com site não hospedado não se encontra o robots.txt).
-- Comportamento em diversos tamanhos de tela e navegadores (Edge, Brave, Bing) ajudando a projetar versão mobile
-- Performance em Inspecionar do Google para ajudar a deixar o site mais fluido
-- Validator schema mostrando reconhecimento dos métodos de SEO e estrutura de dados
+    SEO (6/6).
+- Comportamento em diversos tamanhos de tela e navegadores (Edge, Brave, Bing) está testado. Ajudou a projetar a versão mobile.
+- Teste de Performance na ferramenta Inspecionar do Google ajudou a melhorar a performance em outros dispositivos que não sejam o meu.
+- Validator schema mostrou reconhecimento dos métodos de SEO e ajudou no ajuste dos mesmos.
+- Google ADS geral, campanha de marketing está sendo feita aos poucos e de maneira escalável
 
 ---
 
@@ -62,13 +63,15 @@ O site foi desenvolvido em **HTML, CSS e JavaScript** com suporte da biblioteca 
 
 - © 2025 Marcos VMJ. Todos os direitos reservados. Este software foi desenvolvido por Marcos Vinicius Melo de Jesus sob contratação da empresa Acústica Góes. A titularidade dos direitos autorais é exclusiva do desenvolvedor e da empresa contratante.
 
+"Use como inspiração. Programação não é só codar, e sim dar vida a sua imaginação!"
+
 ---
 
 ## 🔹 Como Visualizar
 
-- Domínio atual (acusticagoes.com.br)
+- Domínio atual: https://acusticagoes.com.br/
 - Clone o repositório (prestar atenção aos caminhos de script.js e styles.css)
 
 ```bash
 git clone https://github.com/marcsvmj/acustica-goes.git
-
+```
