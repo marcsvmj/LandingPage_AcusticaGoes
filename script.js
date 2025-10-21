@@ -168,31 +168,22 @@ if (beneficioItems.length > 0) {
 }
 
 // =============================
-// Esteira contínua de clientes (com loop, sem repetição consecutiva)
+// Esteira contínua de logos (clientes/parceiros)
 // =============================
 document.addEventListener("DOMContentLoaded", () => {
     const swiperEl = document.querySelector('.clientesSwiper .swiper-wrapper');
-    const slides = Array.from(swiperEl.children);
+    const slides = swiperEl.children;
 
-    function shuffle(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-        return array;
-    }
-
-    const shuffledSlides = shuffle(slides);
     const minSlides = 20;
     let count = slides.length;
 
     while (count < minSlides) {
-        shuffledSlides.forEach(slide => {
-            const clone = slide.cloneNode(true);
+        for (let i = 0; i < slides.length; i++) {
+            const clone = slides[i].cloneNode(true);
             swiperEl.appendChild(clone);
             count++;
-            if (count >= minSlides) return;
-        });
+            if (count >= minSlides) break;
+        }
     }
 
     new Swiper('.clientesSwiper', {

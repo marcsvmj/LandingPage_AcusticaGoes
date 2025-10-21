@@ -7,6 +7,18 @@ p {
   text-indent: 1em;
 }
 
+header {
+  height: 500px;
+  position: relative;
+  transition: height 0.3s ease;
+}
+
+@media (max-width: 700px) {
+  header {
+    height: 400px;
+  }
+}
+
 .section-divider {
   width: 97%;
   height: 1px;
@@ -90,6 +102,16 @@ p {
   height: 50px;
   object-fit: contain;
   display: block;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
 }
 
 /* Navbuttons */
@@ -262,6 +284,18 @@ p {
   color: white !important;
 }
 
+#servicos .w3-third:last-child .servicoSwiper .swiper-wrapper,
+#servicos .w3-third:last-child .servicoSwiper .swiper-slide {
+  display: flex !important;
+  justify-content: center !important;
+  background-color: #bcbcbc;
+}
+
+#servicos .w3-third:last-child .servicoSwiper img {
+  width: auto;
+  height: 100%;
+}
+
 @media (max-width: 1150px) and (min-width: 1025px) {
   #servicos .w3-third h3 {
     font-size: clamp(1rem, 2vw, 1.3rem);
@@ -269,7 +303,6 @@ p {
 }
 
 @media (max-width: 1024px) {
-
   #servicos .w3-third {
     width: 30%;
     padding: clamp(10px, 2vw, 20px);
@@ -378,13 +411,13 @@ p {
 
   #servicos .servicoSwiper .swiper-button-next,
   #servicos .servicoSwiper .swiper-button-prev {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
   }
 
   #servicos .servicoSwiper .swiper-button-next::after,
   #servicos .servicoSwiper .swiper-button-prev::after {
-    font-size: 16px;
+    font-size: 40px;
   }
 }
 
@@ -603,6 +636,10 @@ p {
   font-weight: bold;
 }
 
+#clientes .section-title::after {
+  background-color: #7ccfeb;
+}
+
 .clientes-top-gradient {
   position: relative;
   width: 100%;
@@ -625,6 +662,12 @@ p {
   width: 100%;
   padding: 20px 0;
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .clientesSwiper .swiper-slide {
@@ -632,12 +675,23 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+}
+
+.clientesSwiper .swiper-wrapper {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .clientesSwiper img {
   height: 80px;
   object-fit: contain;
   padding: 0 40px;
+  filter: brightness(0.9) saturate(1.2);
+  transition: transform 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
 }
 
 #clientes {
@@ -682,14 +736,10 @@ p {
   }
 }
 
-.qr-code {
-  max-height: 800px;
-  max-width: 100%;
-  transition: transform 0.3s ease;
-}
-
-.qr-code:hover {
-  transform: scale(1.05);
+@media (max-width: 665px) {
+  .contate-nos-title {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 470px) {

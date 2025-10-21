@@ -2,7 +2,6 @@
 User-agent: *
 Disallow: /scripts/
 Disallow: /styles/
-Disallow: /assets/
 
 # Permitir indexação das páginas e seções públicas
 Allow: /
