@@ -73,5 +73,5 @@ O site foi desenvolvido em **HTML, CSS e JavaScript** com suporte da biblioteca 
 - Clone o repositório (prestar atenção aos caminhos de script.js e styles.css)
 
 ```bash
-git clone https://github.com/marcsvmj/acustica-goes.git
+git clone https://github.com/marcsvmj/LandingPage_AcusticaGoes.git
 ```
