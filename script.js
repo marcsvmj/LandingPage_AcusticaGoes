@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 40,
         speed: 5000,
         autoplay: {
-            delay: 0,
+            delay: 1,
             disableOnInteraction: true,
         },
         allowTouchMove: true,
